@@ -316,9 +316,11 @@ declare module 'wikijs' {
 		 * keyword query
 		 * @param {number} [limit]
 		 * limits the number of results
+		 * @param  {Boolean} [all]
+		 * returns entire article objects instead of just titles
 		 * @returns {Promise<Result>}
 		 */
-		search(query: string, limit?: number): Promise<Result>;
+		search(query: string, limit?: number, all?: boolean): Promise<Result>;
 
 		/**
 		 * Opensearch (mainly used as a backup to normal text search)
